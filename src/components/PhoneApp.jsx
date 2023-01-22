@@ -2,13 +2,29 @@ import ContactFilter from './phonebook/ContactFilter';
 import Form from './phonebook/Form';
 import ContactList from './phonebook/ContactList';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchContacts } from 'redux/operations';
+import { useEffect } from 'react';
+import { getContacts, getError, getIsLoading } from 'redux/selectors';
+
 function PhoneApp() {
+  // const dispatch = useDispatch();
+  // const isLoading = useSelector(getIsLoading);
+  // const error = useSelector(getError);
+  // console.log('start');
+
+  // useEffect(() => {
+  //   console.log('PA - FC');
+  //   // dispatch(fetchContacts());
+  // }, [dispatch]);
   return (
-    <div>
-      <Form />
-      <ContactFilter />
-      <ContactList />
-    </div>
+    // <div>
+    //   <Form />
+    //   {isLoading && !error && <b>Request in progress...</b>}
+    //   {/* <ContactFilter /> */}
+    //   <ContactList />
+    // </div>
+    <div>TEST</div>
   );
 }
 export default PhoneApp;

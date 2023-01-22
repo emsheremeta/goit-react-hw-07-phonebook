@@ -1,16 +1,21 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template123
-    </div>
-  );
-};
+// import { useDispatch, useSelector } from 'react-redux';
+// import { fetchContact } from 'redux/operations';
+// import { getContacts, getError, getIsLoading } from 'redux/selectors';
+
+// export const App = () => {
+//   const dispatch = useDispatch();
+//   const isLoading = useSelector(getIsLoading);
+//   const error = useSelector(getError);
+
+//   useEffect(() => {
+//     dispatch(fetchContacts());
+//   }, [dispatch]);
+
+//   return (
+//     <div>
+//       {isLoading && <p>Loading contacts...</p>}
+//       {error && <p>Error</p>}
+//       <p>{items.length > 0 && JSON.stringify(items, null)}</p>
+//     </div>
+//   );
+// };

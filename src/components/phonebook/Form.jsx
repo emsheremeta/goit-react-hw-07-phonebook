@@ -1,6 +1,6 @@
 import styles from './Phonebook.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactSlice';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selectors';
 
 function Form() {
@@ -27,6 +27,7 @@ function Form() {
         addContact({
           name: name,
           number: number,
+          //dispatch(addTask(event.target.elements.text.value));
         })
       );
     } else {
