@@ -30,10 +30,11 @@ const handleRejected = (state, action) => {
     //   state.error= null;
     //   state.item= action.payload;
     // },
-    [fetchContacts.success](state, action) {
-      state.isLoading = false;
-      state.error= null;
-      state.item= action.payload;
+    [fetchContacts.fulfilled](state, action) {
+      console.log('success')
+      state.contacts.isLoading = false;
+      state.contacts.error= null;
+      state.contacts.items= action.payload;
     },
     // //if error
     // fetchingError (state, action) {
@@ -41,6 +42,7 @@ const handleRejected = (state, action) => {
     //   state.error = action.payload;
     // },
     [fetchContacts.error] :handleRejected,
+
     [addContact.pending] :handlePending,
 
     [addContact.fulfilled](state,action){
@@ -50,6 +52,7 @@ const handleRejected = (state, action) => {
       state.items.push(action.payload)
     },
     [addContact.rejected] : handleRejected,
+    
     [deleteContact.pending] :handlePending,
 
     [deleteContact.fulfilled] (state, action) {

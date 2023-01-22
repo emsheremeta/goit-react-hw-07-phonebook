@@ -8,14 +8,15 @@ function ContactList() {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
 
-  console.log('filter', typeof filter);
+  console.log('filter', filter);
 
   // const onDelete = id => {
   //   dispatch(deleteContact(id));
   //   console.log(id);
   // };
   const getFilteredContacts = () => {
-    return contacts.contacts.filter(contact =>
+    console.log(contacts);
+    return contacts.contacts.items.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
