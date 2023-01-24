@@ -1,11 +1,11 @@
 // import ContactFilter from './phonebook/ContactFilter';
 import Form from './phonebook/Form';
 import ContactList from './phonebook/ContactList';
-
+import ContactFilter from './phonebook/ContactFilter';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
-import { getContacts, getError, getIsLoading } from 'redux/selectors';
+import { getError, getIsLoading } from 'redux/selectors';
 
 function PhoneApp() {
   const dispatch = useDispatch();
@@ -21,10 +21,9 @@ function PhoneApp() {
     <div>
       <Form />
       {isLoading && !error && <b>Request in progress...</b>}
-      {/* <ContactFilter /> */}
+      <ContactFilter />
       <ContactList />
     </div>
-    // <div>TEST</div>
   );
 }
 export default PhoneApp;

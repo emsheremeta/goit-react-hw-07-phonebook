@@ -27,7 +27,6 @@ function Form() {
         addContact({
           name: name,
           number: number,
-          //dispatch(addTask(event.target.elements.text.value));
         })
       );
     } else {

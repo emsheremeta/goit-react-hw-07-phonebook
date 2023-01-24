@@ -10,10 +10,6 @@ function ContactList() {
 
   console.log('filter', filter);
 
-  // const onDelete = id => {
-  //   dispatch(deleteContact(id));
-  //   console.log(id);
-  // };
   const getFilteredContacts = () => {
     console.log(contacts);
     return contacts.contacts.items.filter(contact =>
@@ -25,13 +21,7 @@ function ContactList() {
       <h2 className={styles.contactText}>Contacts</h2>
       {contacts.length !== 0 &&
         getFilteredContacts().map(contact => {
-          return (
-            <Contact
-              key={contact.id}
-              contact={contact}
-              // onDelete={onDelete}
-            ></Contact>
-          );
+          return <Contact key={contact.id} contact={contact}></Contact>;
         })}
     </div>
   );
