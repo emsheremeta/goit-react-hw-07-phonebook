@@ -15,4 +15,4 @@ reducers: {
 }
 })
 
-export const {filterChange} =filterSlice.actions
+export const {filterChange} = filterSlice.actions

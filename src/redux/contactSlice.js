@@ -49,7 +49,7 @@ const handleRejected = (state, action) => {
       state.isLoading = true;
       state.error = false;
       state.error = null;
-      state.items.push(action.payload)
+      state.contacts.items.push(action.payload)
     },
     [addContact.rejected] : handleRejected,
     
@@ -58,13 +58,12 @@ const handleRejected = (state, action) => {
     [deleteContact.fulfilled] (state, action) {
       state.isLoading=false;
       state.error = null;
-      /* const index = state.items.findIndex(
-        task => task.id === action.payload.id
+      const index = state.contacts.items.findIndex(
+        c => c.id === action.payload.id
       );
-      state.items.splice(index, 1);
-    },*/
+      state.contacts.items.splice(index, 1);
     },
-[deleteContact.rejected]: handleRejected,
+    [deleteContact.rejected]: handleRejected,
     // // old reducers
     // addContact(state, action) {
     //     action.payload.id=nanoid();

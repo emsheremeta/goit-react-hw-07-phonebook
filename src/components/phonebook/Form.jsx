@@ -19,7 +19,7 @@ function Form() {
       return;
     }
     if (
-      contacts.contacts.filter(
+      contacts.contacts.items.filter(
         contact => contact.name.toLocaleLowerCase() === name.toLocaleLowerCase()
       ).length === 0
     ) {
